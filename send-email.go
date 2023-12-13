@@ -21,7 +21,7 @@ func main() {
 	smtpHost := "smtp.gmail.com"
 	smtpPort := "587"
 	auth := smtp.PlainAuth("", *from, *password, smtpHost)
-	headers := fmt.Sprintf("From: raspberrypi <%s>\nSubject: Message from raspberry pi\nTo:%s\n\n",
+	headers := fmt.Sprintf("From: raspberrypi <%s>\nSubject: Message from raspberry pi\nTo: %s\n\n",
 		*from, *to)
 	if *msg == "" {
 		b, err := io.ReadAll(os.Stdin)
